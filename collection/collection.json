@@ -1,0 +1,1170 @@
+{
+	"info": {
+		"_postman_id": "ccb25f26-9674-421d-95ac-8846a20f54be",
+		"name": "potato",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27259125",
+		"_collection_link": "https://grey-sunset-613444.postman.co/workspace/SHIFT~7fb33611-fbda-4aa2-ab38-9b2aa75eebcb/collection/27259125-ccb25f26-9674-421d-95ac-8846a20f54be?action=share&creator=27259125&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "all users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/users",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Feb 2024 07:28:40 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"a65beb42-e30b-4b81-b14c-a20d35503f62\",\n        \"wallet\": {\n            \"id\": \"484b25c4-1d79-4384-a0ae-5209a63cc829\",\n            \"amount\": 0,\n            \"lastUpdate\": \"2024-02-01T07:28:34.412+00:00\"\n        },\n        \"firstName\": \"Mikhail\",\n        \"lastName\": \"Savin\",\n        \"email\": \"mikhail.d.savin@gmail.com\",\n        \"phone\": \"+79138779317\",\n        \"registrationDate\": \"2024-02-01\",\n        \"lastUpdateDate\": \"2024-02-01\",\n        \"age\": 22,\n        \"password\": \"somepassword123\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/users/fe70688f-8abf-4f03-aae1-3e365a13e40c",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"users",
+								"fe70688f-8abf-4f03-aae1-3e365a13e40c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/users/bb76ef55-c5e8-4d0b-8601-1bdd8273efa1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"bb76ef55-c5e8-4d0b-8601-1bdd8273efa1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Jan 2024 11:52:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"bb76ef55-c5e8-4d0b-8601-1bdd8273efa1\",\n    \"walletId\": null,\n    \"firstName\": \"Mikhail\",\n    \"lastName\": \"Savin\",\n    \"fullName\": \"Savin Mikhail\",\n    \"email\": \"mikhail.d.savin@gmail.com\",\n    \"phone\": 1234567890,\n    \"registrationDate\": \"2024-01-12\",\n    \"lastUpdateDate\": \"2024-01-15\",\n    \"age\": 20\n}"
+						}
+					]
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Mikhail\",\n    \"lastName\": \"Savin\",\n    \"password\": \"verysecret\",\n    \"email\": \"mikhail.d.savin@gmail.com\",\n    \"phone\": 89138779317,\n    \"age\": 22\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Mikhail\",\n    \"lastName\": \"Savin\",\n    \"password\": \"somepassword123\",\n    \"email\": \"mikhail.d.savin@gmail.com\",\n    \"phone\": \"+79138779317\",\n    \"age\": 22\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/users",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Feb 2024 06:38:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"violations\": [\n        {\n            \"fieldName\": \"password\",\n            \"message\": \"password required\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "edit",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Mikhail\",\n    \"lastName\": \"Savin\",\n    \"email\": \"mikhail.d.savin@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/users/{{userId}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"users",
+								"{{userId}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "edit",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"Mikhail\",\n    \"lastName\": \"Savin\",\n    \"email\": \"mikhail.d.savin@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/users/{{userId}}",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"users",
+										"{{userId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 03 Feb 2024 03:56:40 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"eb5f1760-950e-416e-9b01-cad65458998b\",\n    \"walletId\": \"180e9e64-a6a6-4f5c-93c7-56747e06e7c9\",\n    \"firstName\": \"Mikhail\",\n    \"lastName\": \"Savin\",\n    \"fullName\": \"Mikhail Savin\",\n    \"email\": \"mikhail.d.savin@gmail.com\",\n    \"phone\": 89138779317,\n    \"registrationDate\": \"03-00-2024\",\n    \"lastUpdateDate\": \"03-00-2024\",\n    \"age\": 22\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "wallet",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/wallet/bill/42b22467-86fc-415a-937a-fee08828985f",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"wallet",
+								"bill",
+								"42b22467-86fc-415a-937a-fee08828985f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/wallet/bill/33e82ded-93b4-4c97-98e2-248489493b46",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"wallet",
+										"bill",
+										"33e82ded-93b4-4c97-98e2-248489493b46"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Feb 2024 09:55:06 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"33e82ded-93b4-4c97-98e2-248489493b46\",\n    \"amount\": 0,\n    \"lastUpdate\": \"01-54-2024\"\n}"
+						}
+					]
+				},
+				{
+					"name": "hesoyam",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\": 10000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/wallet/hesoyam/53dd0cdc-823b-41fe-9ad9-fbefa2bff95f",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"wallet",
+										"hesoyam",
+										"53dd0cdc-823b-41fe-9ad9-fbefa2bff95f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 11:11:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"billId\": \"c09d0629-a025-489b-8607-1e3e6f358a16\",\n    \"amount\": 10000\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "bill",
+			"item": [
+				{
+					"name": "get bills",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/history/{{userId}}?type=refill",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"history",
+								"{{userId}}"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "refill"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/history/{{userId}}?type=refill",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"history",
+										"{{userId}}"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "refill"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 14:35:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"f10015f5-25a7-42a4-91c6-3a79213ba2de\",\n        \"userId\": \"7e70573e-47e1-41cf-856e-d92ce8a0c090\",\n        \"amount\": 10000,\n        \"transactionDate\": \"2024-02-02\",\n        \"type\": \"refill\",\n        \"receiverPhone\": null,\n        \"maintenanceNumber\": null,\n        \"status\": \"successful\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "create transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userId",
+									"value": "{{userId}}",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "receiverPhone",
+									"value": "89132832834",
+									"type": "text"
+								},
+								{
+									"key": "maintenanceNumber",
+									"value": "100200300",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8082/transfers",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"transfers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create transaction",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "userId",
+											"value": "{{userId}}",
+											"type": "text"
+										},
+										{
+											"key": "amount",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "receiverPhone",
+											"value": "89132832834",
+											"type": "text"
+										},
+										{
+											"key": "maintenanceNumber",
+											"value": "100200300",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8082/transfers",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"transfers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Feb 2024 15:18:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"b29a9a86-1f67-4276-82fe-52ae10bb62e8\",\n    \"userId\": \"5ba7458c-ff95-4f68-bf79-5ad151281247\",\n    \"wallet\": {\n        \"id\": \"77831f87-96ca-493f-8923-ef305dddbfbb\",\n        \"amount\": 0,\n        \"lastUpdate\": \"2024-02-02T15:18:11.379+00:00\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "session",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/users/{{userId}}/sessions",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"users",
+								"{{userId}}",
+								"sessions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/users/{{userId}}/sessions",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"users",
+										"{{userId}}",
+										"sessions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 03 Feb 2024 03:43:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"75539ce9-5ae8-4672-bf88-9f1f9dc79e34\",\n        \"userId\": \"08613435-1c0e-496e-810e-839e4c3de8dc\",\n        \"expirationTime\": \"10-00-2024\",\n        \"active\": true\n    },\n    {\n        \"id\": \"89d2421a-839b-4864-9099-959e38baca33\",\n        \"userId\": \"08613435-1c0e-496e-810e-839e4c3de8dc\",\n        \"expirationTime\": \"10-00-2024\",\n        \"active\": true\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get current",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/users/{{userId}}/sessions/current",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"users",
+								"{{userId}}",
+								"sessions",
+								"current"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/users/{{userId}}/sessions/current",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"users",
+										"{{userId}}",
+										"sessions",
+										"current"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 03 Feb 2024 03:51:33 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"579ef26b-6454-4917-82c9-5ffec1f1dffa\",\n    \"userId\": \"001261e9-ce90-4ea0-b9bd-f4b364f600a6\",\n    \"expirationTime\": \"10-00-2024\",\n    \"active\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "create session",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": 89138779317,\n    \"password\": \"verysecret\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/users/sessions",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"users",
+								"sessions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create session",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phone\": 89138779317,\n    \"password\": \"verysecret\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/users/sessions",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"users",
+										"sessions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 03 Feb 2024 03:42:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"75539ce9-5ae8-4672-bf88-9f1f9dc79e34\",\n    \"userId\": \"08613435-1c0e-496e-810e-839e4c3de8dc\",\n    \"token\": \"98bc85aa-ee83-4e75-a915-d6e9548858f8\",\n    \"expirationTime\": \"10-42-2024\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete session",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/users/sessions/fdbfac33-c8ef-4a2d-afbe-e4f0f503293e",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"users",
+								"sessions",
+								"fdbfac33-c8ef-4a2d-afbe-e4f0f503293e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete session",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/users/sessions/fdbfac33-c8ef-4a2d-afbe-e4f0f503293e",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"users",
+										"sessions",
+										"fdbfac33-c8ef-4a2d-afbe-e4f0f503293e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 03 Feb 2024 03:51:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "maintenance",
+			"item": [
+				{
+					"name": "get maintenance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/maintenance/{{userId}}?type=outbound",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"maintenance",
+								"{{userId}}"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "outbound"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get maintenance",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/maintenance/{{userId}}?type=inbound",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"maintenance",
+										"{{userId}}"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "inbound"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 03 Feb 2024 01:53:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "get maintenance",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/maintenance/{{userId}}?type=outbound",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"maintenance",
+										"{{userId}}"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "outbound"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 03 Feb 2024 02:36:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"fcbb1863-876e-4181-a6b5-d822a1905c05\",\n        \"type\": \"outbound\",\n        \"amount\": 100,\n        \"maintenanceNumber\": 3308163827721291436,\n        \"status\": \"unpaid\",\n        \"transactionDate\": \"2024-02-03\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "create maintenance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userId",
+									"value": "{{userId}}",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "81234567898",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "some comment here",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8082/maintenance",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"maintenance"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "userId",
+											"value": "{{userId}}",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "81234567898",
+											"type": "text"
+										},
+										{
+											"key": "amount",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "comment",
+											"value": "some comment here",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8082/maintenance",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"maintenance"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 03 Feb 2024 02:36:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"fcbb1863-876e-4181-a6b5-d822a1905c05\",\n    \"maintenanceNumber\": 3308163827721291436,\n    \"status\": \"unpaid\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

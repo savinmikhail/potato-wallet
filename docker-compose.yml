@@ -1,0 +1,55 @@
+version: '3.9'
+services:
+  # Сервис для разворачивания контейнера с базой данных
+  postgre:
+    container_name: postgre
+    image: postgres:12
+    hostname: database
+    volumes:
+      - ./postgres:/docker-entrypoint-initdb.d
+    environment:
+      - POSTGRES_DB=wallet
+      - POSTGRES_USER=wallet
+      - POSTGRES_PASSWORD=wallet
+    ports:
+      - "5431:5432"
+  # Сервис для разворачивания контейнера с приложением
+  webapi:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    hostname: webapi
+    ports:
+      - "8081:8082"
+    depends_on:
+      - postgre
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://database:5432/wallet
+      - POSTGRES_USER=wallet
+      - POSTGRES_PASSWORD=wallet
+    healthcheck:
+      test: curl http://localhost:8081 || exit 0
+      interval: 10s
+      retries: 5
+      start_period: 15s
+      timeout: 10s
+  tests:
+    image: wil124/shift-intensiv-winter-2024-tests
+    pull_policy: always
+    container_name: tests
+    ports:
+      - "8095:8081"
+    depends_on:
+      - webapi
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@pgadmin.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+      - PGADMIN_LISTEN_ADDRESS=0.0.0.0
+    ports:
+      - "8083:80"
+    depends_on:
+      - postgre
